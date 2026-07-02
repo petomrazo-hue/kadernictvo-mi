@@ -511,6 +511,57 @@ section { position: relative; }
 
 .svc-flip .svc-copy p { margin-left: auto; }
 
+/* ---------- kategórie úkonov v službách ---------- */
+
+.svc-list {
+  margin-top: 0.9rem;
+  list-style: none;
+  display: grid;
+  gap: 0.35rem;
+  color: var(--cream-dim);
+  font-size: 0.95rem;
+}
+
+.svc-list li::before { content: "•"; color: var(--gold); margin-right: 0.55em; }
+
+/* ---------- galéria (reálne fotky salónu z FB) ---------- */
+
+.galeria {
+  background: var(--noir-2);
+  border-top: 1px solid var(--line-soft);
+  padding: clamp(4.5rem, 9vw, 7.5rem) clamp(1.25rem, 5vw, 3rem);
+}
+
+.galeria .sec-head { text-align: center; }
+
+.galeria .flourish { margin-inline: auto; }
+
+.gal-grid {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.1rem;
+}
+
+.gal-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+  padding: 8px;
+  border: 1px solid rgba(217, 165, 92, 0.45);
+  box-shadow: inset 0 0 0 3px var(--noir-2), inset 0 0 0 4px rgba(217, 165, 92, 0.25);
+}
+
+.gal-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease-lux);
+}
+
+.gal-item:hover img { transform: scale(1.07); }
+
 /* ---------- o salóne ---------- */
 
 .about {
@@ -754,6 +805,7 @@ html.js .rv.is-in { opacity: 1; transform: none; }
   .svc-flip .svc-photo { order: 0; }
   .svc-flip .svc-copy { order: 1; text-align: left; }
   .svc-flip .svc-copy p { margin-left: 0; }
+  .gal-grid { grid-template-columns: repeat(2, 1fr); }
   .about-grid { grid-template-columns: 1fr; }
   .about-photo { max-width: 480px; }
   .contact-meta { grid-template-columns: 1fr; gap: 1.6rem; }
