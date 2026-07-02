@@ -650,6 +650,59 @@ section { position: relative; }
 
 .fb-link svg { width: 18px; height: 18px; fill: currentColor; }
 
+/* ---------- FAQ ---------- */
+
+.faq { padding: clamp(4.5rem, 9vw, 7.5rem) clamp(1.25rem, 5vw, 3rem); }
+
+.faq .sec-head { text-align: center; }
+.faq .flourish { margin-inline: auto; }
+
+.faq-list {
+  max-width: 760px;
+  margin: 0 auto;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.faq-list details {
+  border: 1px solid var(--line);
+  background: rgba(42, 26, 16, 0.55);
+  padding: 1.1rem 1.4rem;
+  transition: border-color 0.3s;
+}
+
+.faq-list details[open] { border-color: rgba(217, 165, 92, 0.55); }
+
+.faq-list summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: var(--champagne);
+  position: relative;
+  padding-right: 2rem;
+}
+
+.faq-list summary::-webkit-details-marker { display: none; }
+
+.faq-list summary::after {
+  content: "+";
+  position: absolute;
+  right: 0.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold);
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 1.5rem;
+  transition: transform 0.3s var(--ease-lux);
+}
+
+.faq-list details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+
+.faq-list details p { margin-top: 0.7rem; color: var(--cream-dim); font-size: 0.98rem; }
+
 /* ---------- kontakt ---------- */
 
 .contact {
@@ -1023,6 +1076,37 @@ html.js .rv.is-in { opacity: 1; transform: none; }
       </div>
     </div>
   </section>
+
+  <section class="faq" id="faq">
+    <span class="side-label" aria-hidden="true">Otázky</span>
+    <header class="sec-head rv">
+      <p class="byline">Praktické informácie</p>
+      <h2>Časté <em>otázky</em></h2>
+    </header>
+    <div class="faq-list">
+      <details class="rv">
+        <summary>Ako sa objednám na termín?</summary>
+        <p>Najjednoduchšie telefonicky na čísle 0948 134 234. Ak práve strihárne, farbíme alebo
+        lepíme mihalnice, nedvíhame — pošlite SMS a ozveme sa hneď, ako budeme mať voľné ruky.</p>
+      </details>
+      <details class="rv">
+        <summary>Koľko trvá farbenie alebo melír?</summary>
+        <p>Podľa dĺžky a hustoty vlasov počítajte s dvomi až štyrmi hodinami. Pri objednaní vám
+        povieme presnejší odhad, aby ste si vedeli naplánovať deň.</p>
+      </details>
+      <details class="rv">
+        <summary>Robíte aj svadobné účesy a líčenie?</summary>
+        <p>Áno — svadobný účes aj make-up pripravíme vopred na skúšku, aby ste vo veľký deň
+        presne vedeli, ako budete vyzerať. Termíny na svadobnú sezónu odporúčame rezervovať skôr.</p>
+      </details>
+      <details class="rv">
+        <summary>Kde v Michalovciach vás nájdem?</summary>
+        <p>Na Námestí Slobody 15, priamo v centre mesta. Zastavíte sa k nám pohodlne pešo
+        aj počas obedňajšej prestávky.</p>
+      </details>
+    </div>
+  </section>
+
   <section class="contact" id="kontakt" itemscope itemtype="https://schema.org/HairSalon">
     <span class="side-label" aria-hidden="true">Kontakt</span>
     <div class="contact-inner">
