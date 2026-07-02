@@ -5,12 +5,12 @@
   kadernictvomichalovce.sk | návrh: Peter Mráz, mrazosoft.sk
 
   POUŽITIE:
-  - Všetko je v tomto jednom súbore: CSS v <style>, JS v <script>.
-  - Farby a fonty sú CSS premenné v :root (sekcia "tokeny").
-  - Fotky sú z fotobanky Pexels (Pexels License, komerčné použitie OK)
+  - Všetko v jednom súbore: CSS v <style>, JS v <script>.
+  - Farby a fonty = CSS premenné v :root (sekcia "tokeny").
+  - Fotky z fotobanky Pexels (Pexels License, komerčné použitie OK)
     cez CDN — pred spustením vymeniť za reálne fotky salónu.
-  - Fonty tu idú z Google Fonts CDN kvôli jednoduchosti šablóny;
-    produkčná verzia (repo) ich má self-host kvôli GDPR.
+  - Fonty tu z Google Fonts CDN kvôli jednoduchosti šablóny;
+    produkčná verzia (repo/ZIP) ich má self-host kvôli GDPR.
   - Telefón: hľadaj "tel:+421948134234". FB: profile.php?id=100063642699656
   ============================================================
 -->
@@ -692,7 +692,8 @@ html.js .rv.is-in { opacity: 1; transform: none; }
 }
 
 @media (max-width: 700px) {
-  .site-nav { display: none; }
+  .site-head { flex-wrap: wrap; row-gap: 0.15rem; padding-block: 0.6rem; }
+  .site-nav { order: 3; width: 100%; justify-content: center; gap: 1.6rem; margin-left: 0; }
 }
 
 @media (max-width: 560px) {
