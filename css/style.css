@@ -262,6 +262,9 @@ a { color: inherit; }
 
 /* ---------- shimmer — lesk vlasov (podpis č. 1) ---------- */
 
+.shimmer { color: var(--gold); }
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
 .shimmer {
   background: linear-gradient(105deg,
     var(--gold) 0%, var(--gold) 38%,
@@ -273,6 +276,7 @@ a { color: inherit; }
   background-clip: text;
   color: transparent;
   animation: shine 7s var(--ease-lux) infinite;
+}
 }
 
 @keyframes shine {
@@ -666,12 +670,12 @@ html.js .rv.is-in { opacity: 1; transform: none; }
   .hero-copy { margin-right: 0; padding-top: 6.5rem; text-align: center; }
   .hero-hook { margin-inline: auto; }
   .hero-actions { justify-content: center; }
-  .hero-photo { height: 56vh; order: -1; }
+  .hero-photo { height: 60svh; order: -1; }
+  .hero-photo img { object-position: 50% 12%; }
   .hero-photo::after {
     background: linear-gradient(0deg, var(--noir) 4%, rgba(23, 13, 8, 0.25) 45%, rgba(23, 13, 8, 0.4) 100%);
   }
   .hero-copy { padding-top: 1.5rem; }
-  .site-nav { display: none; }
   .svc, .svc-flip { grid-template-columns: 1fr; gap: 1.2rem; }
   .svc-flip .svc-photo { order: 0; }
   .svc-flip .svc-copy { order: 1; text-align: left; }
@@ -680,6 +684,10 @@ html.js .rv.is-in { opacity: 1; transform: none; }
   .about-photo { max-width: 480px; }
   .contact-meta { grid-template-columns: 1fr; gap: 1.6rem; }
   .side-label { display: none; }
+}
+
+@media (max-width: 700px) {
+  .site-nav { display: none; }
 }
 
 @media (max-width: 560px) {
