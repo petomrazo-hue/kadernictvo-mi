@@ -1,0 +1,124 @@
+{
+  "url": "https://www.kadernictvomichalovce.sk",
+  "merania": {
+    "mobile": {
+      "skore": {
+        "vykon": 96,
+        "pristupnost": 100,
+        "spravna_prax": 100,
+        "seo": 100
+      },
+      "lab": {
+        "largest-contentful-paint": {
+          "nazov": "LCP — kedy je vidieť hlavný obsah",
+          "hodnota": 2851.895,
+          "zobrazene": "2.9 s"
+        },
+        "first-contentful-paint": {
+          "nazov": "FCP — kedy je vidieť čokoľvek",
+          "hodnota": 976.895,
+          "zobrazene": "1.0 s"
+        },
+        "total-blocking-time": {
+          "nazov": "TBT — ako dlho stránka nereaguje",
+          "hodnota": 0,
+          "zobrazene": "0 ms"
+        },
+        "cumulative-layout-shift": {
+          "nazov": "CLS — poskakovanie obsahu",
+          "hodnota": 0.004245956505043146,
+          "zobrazene": "0.004"
+        },
+        "speed-index": {
+          "nazov": "Speed Index",
+          "hodnota": 976.895,
+          "zobrazene": "1.0 s"
+        }
+      },
+      "brzdy": [
+        {
+          "id": "cache-insight",
+          "nazov": "Use efficient cache lifetimes",
+          "usetri_ms": 1900,
+          "usetri_kb": 0
+        },
+        {
+          "id": "image-delivery-insight",
+          "nazov": "Improve image delivery",
+          "usetri_ms": 1050,
+          "usetri_kb": 0
+        }
+      ],
+      "vaha_stranky_kb": 1786,
+      "lighthouse_verzia": "13.4.1",
+      "merane": "2026-07-26T11:43:52.289Z",
+      "finalna_url": "https://www.kadernictvomichalovce.sk/",
+      "vsetky_behy_vykon": [
+        88,
+        96,
+        96
+      ],
+      "poc_behov": 3
+    },
+    "desktop": {
+      "skore": {
+        "vykon": 100,
+        "pristupnost": 95,
+        "spravna_prax": 100,
+        "seo": 100
+      },
+      "lab": {
+        "largest-contentful-paint": {
+          "nazov": "LCP — kedy je vidieť hlavný obsah",
+          "hodnota": 583.476,
+          "zobrazene": "0.6 s"
+        },
+        "first-contentful-paint": {
+          "nazov": "FCP — kedy je vidieť čokoľvek",
+          "hodnota": 283.476,
+          "zobrazene": "0.3 s"
+        },
+        "total-blocking-time": {
+          "nazov": "TBT — ako dlho stránka nereaguje",
+          "hodnota": 0,
+          "zobrazene": "0 ms"
+        },
+        "cumulative-layout-shift": {
+          "nazov": "CLS — poskakovanie obsahu",
+          "hodnota": 0.007430559118368356,
+          "zobrazene": "0.007"
+        },
+        "speed-index": {
+          "nazov": "Speed Index",
+          "hodnota": 294.83575900084406,
+          "zobrazene": "0.3 s"
+        }
+      },
+      "brzdy": [
+        {
+          "id": "cache-insight",
+          "nazov": "Use efficient cache lifetimes",
+          "usetri_ms": 300,
+          "usetri_kb": 0
+        },
+        {
+          "id": "image-delivery-insight",
+          "nazov": "Improve image delivery",
+          "usetri_ms": 150,
+          "usetri_kb": 0
+        }
+      ],
+      "vaha_stranky_kb": 1786,
+      "lighthouse_verzia": "13.4.1",
+      "merane": "2026-07-26T11:44:15.416Z",
+      "finalna_url": "https://www.kadernictvomichalovce.sk/",
+      "vsetky_behy_vykon": [
+        100,
+        100,
+        99
+      ],
+      "poc_behov": 3
+    }
+  },
+  "teren": null
+}
