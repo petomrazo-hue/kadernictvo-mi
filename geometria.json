@@ -1,0 +1,30 @@
+{
+ "url": "http://localhost:8000",
+ "repo": "/Users/petomraz/LAB/001projects/dufek/kadernictvo-mi",
+ "sirky": [
+  1440,
+  390
+ ],
+ "cookies": [
+  "button:has-text('Súhlasím')",
+  "button:has-text('Prijať')",
+  "a:has-text('Prijať')"
+ ],
+ "stranky": {
+  "domov": {
+   "cesta": "/index.html"
+  },
+  "sluzby": {
+   "cesta": "/sluzby.html"
+  },
+  "salon": {
+   "cesta": "/salon.html"
+  },
+  "galeria": {
+   "cesta": "/galeria.html"
+  },
+  "kontakt": {
+   "cesta": "/kontakt.html"
+  }
+ }
+}
