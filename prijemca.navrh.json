@@ -1,0 +1,45 @@
+{
+  "_popis": "NÁVRH (14.10.2026) pre kadernictvomichalovce.sk (Dufekovo repo VS_SDS_GIT/kadernictvomichalovce.sk, Umbraco 8.18.15, net472). Mac repo 001projects/dufek/kadernictvo-mi je len statický prototyp + poznámky, odovzdávalo sa do Dufekovho gitu z VM.",
+  "_posledny_odovzdany_commit": "500bf27cd18d8c50614439a7a81e01c55edf6e39",
+  "_neistoty": [
+    "sample-db.sql (náš export z 24.7., mssql-scripter) končí 'USE [master]' + 'ALTER DATABASE [um_kadernictvomichalovce_sk] SET READ_WRITE' → skript dá FAIL sql_bez_use a import do kadernictvo_mi_prijemca by na poslednom príkaze padol. Dufekov export e59e1db tieto riadky NEMAL (odchýlka od jeho formátu). U Dufeka prejde len preto, že DB volá rovnako.",
+    "Repo nie je v C:\\dev, ale v C:\\Users\\petomraz\\Source\\repos (pracovná kópia má zmenený Web.config + 2 .bak súbory, klon z git DB to neovplyvní).",
+    "Solution je .slnx (VS 17.13+); build ide cez .csproj webu, lib je ProjectReference."
+  ],
+  "vm_repo": "C:\\Users\\petomraz\\Source\\repos\\kadernictvomichalovce.sk",
+  "docker_kontajner": "mssql-qform",
+  "secrety_env": "qform.env",
+  "sql_export": [
+    "www.kadernictvomichalovce.sk/kadernictvomichalovce.lib/Repositories/_sql/sample-db.sql"
+  ],
+  "build": "www.kadernictvomichalovce.sk/www.kadernictvomichalovce.sk/www.kadernictvomichalovce.sk.csproj",
+  "web": "www.kadernictvomichalovce.sk/www.kadernictvomichalovce.sk",
+  "dll_kontrola": [
+    "kadernictvomichalovce.lib.dll",
+    "www.kadernictvomichalovce.sk.dll"
+  ],
+  "conn_name": "umbracoDbDSN",
+  "db_server_z_vm": "10.211.55.2,14332",
+  "port": 64720,
+  "start_cakaj_s": 420,
+  "log_dir": "App_Data/Logs",
+  "db_kontroly": [
+    {"popis": "schéma Umbraco 8 (umbracoKeyValue)", "sql": "SELECT COUNT(*) FROM umbracoKeyValue", "min": 1},
+    {"popis": "obsah webu (umbracoNode, v exporte 318)", "sql": "SELECT COUNT(*) FROM umbracoNode", "min": 100}
+  ],
+  "url": [
+    {"cesta": "/", "obsahuje": "Madame"},
+    {"cesta": "/sluzby/", "obsahuje": ""},
+    {"cesta": "/galeria/", "obsahuje": ""},
+    {"cesta": "/salon/", "obsahuje": ""},
+    {"cesta": "/recenzie/", "obsahuje": "<form"},
+    {"cesta": "/kontakt/", "obsahuje": ""},
+    {"cesta": "/sitemap/", "obsahuje": "<urlset"}
+  ],
+  "admin_login": {"cesta": "/umbraco", "obsahuje": "Umbraco"},
+  "web_config": {
+    "mail_pickup": true,
+    "nesmie_obsahovat": [],
+    "appSettings": {}
+  }
+}
